@@ -10,7 +10,7 @@ body {
 
 }
 
-.navigation {
+.lnb-menu {
   position: fixed;
   top: 20px;
   left: 20px;
@@ -24,12 +24,12 @@ body {
   overflow: hidden;
 }
 
-.navigation.active {
+.lnb-menu.active {
   width: 300px;
 }
 
-.navigation ul {
-  position: absolute;
+.lnb-menu ul {
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -37,7 +37,7 @@ body {
   padding-top: 40px;
 }
 
-.navigation ul li {
+.lnb-menu ul li {
   position: relative;
   list-style: none;
   width: 100%;
@@ -45,7 +45,7 @@ body {
   border-bottom-left-radius: 20px;
 }
 
-.navigation ul li b:nth-child(1) {
+.lnb-menu ul li b:nth-child(1) {
   position: absolute;
   top: -20px;
   height: 20px;
@@ -54,7 +54,7 @@ body {
   display: none;
 }
 
-.navigation ul li b:nth-child(1)::before {
+.lnb-menu ul li b:nth-child(1)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -66,7 +66,7 @@ body {
 }
 
 
-.navigation ul li b:nth-child(2) {
+.lnb-menu ul li b:nth-child(2) {
   position: absolute;
   bottom: -20px;
   height: 20px;
@@ -75,7 +75,7 @@ body {
   display: none;
 }
 
-.navigation ul li b:nth-child(2)::before {
+.lnb-menu ul li b:nth-child(2)::before {
   content: '';
   position: absolute;
   top: 0;
@@ -87,16 +87,16 @@ body {
 }
 
 
-.navigation ul li.active b:nth-child(1),
-.navigation ul li.active b:nth-child(2) {
+.lnb-menu ul li.active b:nth-child(1),
+.lnb-menu ul li.active b:nth-child(2) {
   display: block;
 }
 
-.navigation ul li.active {
+.lnb-menu ul li.active {
   background: #fff;
 }
 
-.navigation ul li a {
+.lnb-menu ul li a {
   position: relative;
   width: 100%;
   display: flex;
@@ -104,11 +104,11 @@ body {
   color: #fff;
 }
 
-.navigation ul li.active a {
+.lnb-menu ul li.active a {
   color: #333
 }
 
-.navigation ul li a .icon {
+.lnb-menu ul li a .icon {
   position: relative;
   display: block;
   min-width: 60px;
@@ -117,11 +117,11 @@ body {
   text-align: center;
 }
 
-.navigation ul li a .icon ion-icon {
+.lnb-menu ul li a .icon ion-icon {
   font-size: 1.5em;
 }
 
-.navigation ul li a .title {
+.lnb-menu ul li a .title {
   position: relative;
   display: block;
   padding-left: 10px;

@@ -1,0 +1,131 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="stylesheet" href="../css/postman-sample.css">
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<div class="lnb-menu">
+  <ul>
+    <li class="list active">
+      <b></b>
+      <b></b>
+      <a href="#1">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+        <span class="title">Setting</span>
+      </a>
+    </li>
+    <li class="list">
+      <b></b>
+      <b></b>
+      <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+        <span class="title">Setting</span>
+      </a>
+    </li>
+    <li class="list">
+      <b></b>
+      <b></b>
+      <a href="#">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+        <span class="title">Setting</span>
+      </a>
+    </li>
+    <li class="list">
+      <b></b>
+      <b></b>
+      <a href="#">
+          <span class="icon">
+             <ion-icon name="settings-outline"></ion-icon>
+          </span>
+        <span class="title">Setting</span>
+      </a>
+    </li>
+  </ul>
+</div>
+
+<div style="display: flex;">
+  <div class="lnb-menu-shadow"></div>
+  <div class="content">
+    <nav class="gnb-menu">
+      <a href="#params">Params</a>
+      <a href="#headers">Headers</a>
+      <a href="#body">Body</a>
+    </nav>
+    <div id="params">
+      params
+      <input type="text"/>
+      <input type="text"/>
+    </div>
+    <div id="headers">
+      headers
+      <input type="text"/>
+      <input type="text"/>
+    </div>
+    <div id="body">
+      body
+      <input type="text"/>
+      <input type="text"/>
+    </div>
+    <div class="main">
+      <input type="text"/>
+      <input type="text"/>
+    </div>
+  </div>
+</div>
+
+<div class="toggle">
+  <ion-icon name="menu-outline" class="open"></ion-icon>
+  <ion-icon name="close" class="close"></ion-icon>
+</div>
+
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+<script>
+  /* lnb */
+  const menuToggle = document.querySelector(".toggle");
+  const navigation = document.querySelector('.lnb-menu');
+  const navigationShadow = document.querySelector(".lnb-menu-shadow");
+
+  menuToggle.onclick = function () {
+    menuToggle.classList.toggle('active')
+    navigation.classList.toggle('active')
+    navigationShadow.classList.toggle('active')
+  }
+  const list = document.querySelectorAll(".list");
+  for (let i = 0; i < list.length; i++) {
+    list[i].onclick = function () {
+      let j = 0;
+      while (j < list.length) {
+        list[j++].className = ''
+      }
+      list[i].className = 'list active';
+    }
+  }
+
+  /* gnb */
+
+</script>
+</body>
+</html>
